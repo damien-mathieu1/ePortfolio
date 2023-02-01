@@ -38,7 +38,7 @@ export default {
     align-items: center;
     width: 65%;
     height: 30vh;
-    border : black solid 4px;
+    border : black solid 2.3px;
     border-radius: 40px;
     margin: 20px;
     p{      
@@ -55,6 +55,6 @@ export default {
     cursor: pointer;
     transform: scale(1.05);
     transition: 0.3s;
-}
+}   
 
 </style>

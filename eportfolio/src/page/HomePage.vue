@@ -1,56 +1,30 @@
 <template>
-    <div class="projets">
-        <ProjetCard v-for="(projet,index) in data_projet" :info_projet="projet" :key="index"/>
-    </div>
+    <NavBar></NavBar>
+    <p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pharetra porta urna. Donec ornare et lorem quis congue. Morbi ac ullamcorper neque. Cras eu imperdiet justo, eu ultrices est. Donec enim mi, sodales vel bibendum sed, consectetur id massa. Cras consequat consectetur suscipit. Integer lobortis convallis urna, eget condimentum nibh consectetur vel. Ut eu ultricies diam. Quisque vitae erat magna. Etiam euismod tincidunt magna, eu tempus neque interdum non. Quisque suscipit lacinia volutpat. Nunc quis maximus lorem. Proin eu luctus nibh. Integer in lobortis quam, eget dictum risus. Cras tincidunt cursus arcu, non scelerisque ex interdum sed.
+
+Proin cursus, elit non pellentesque laoreet, orci metus accumsan felis, id cursus dolor libero non purus. Phasellus cursus maximus lectus, et fermentum nibh lacinia non. Cras placerat placerat hendrerit. Vestibulum efficitur efficitur turpis quis sodales. Aliquam sed pellentesque ipsum. Etiam porta, nisi vel fermentum mollis, sem sem finibus nisl, sit amet gravida erat massa at justo. Donec in maximus elit.
+
+Aliquam nec justo velit. Nunc ullamcorper erat nibh. Cras ac tempor risus. Aliquam iaculis volutpat quam, sed tristique magna iaculis nec. Donec tincidunt tortor nunc. In volutpat, orci non blandit sodales, massa sapien vulputate nulla, et maximus ipsum risus nec odio. Curabitur facilisis cursus nisi eu ultrices. Cras ornare pellentesque metus, in aliquam orci vulputate in. Vestibulum eget gravida nulla. Aenean ultricies eros et maximus luctus. Maecenas laoreet turpis massa, in viverra urna interdum suscipit. Maecenas vehicula nec lacus vitae elementum. Nam nec pulvinar purus, quis dictum quam. Mauris porttitor magna a mi mollis consequat. Suspendisse tempor, erat ac sollicitudin tempus, nisl nisl tempus erat, ac sodales nibh lacus sit amet odio.
+
+In volutpat diam id nisi molestie feugiat. Curabitur nec mauris neque. Aenean in lectus nulla. Ut odio dui, tristique non fermentum eget, elementum nec nulla. Nulla congue rhoncus porta. Duis leo lorem, rutrum nec risus vitae, porta fermentum ligula. Praesent et nunc et tortor ullamcorper malesuada. Fusce at placerat justo. Sed tortor mi, finibus et euismod sed, hendrerit fringilla sapien. Morbi dictum nec massa varius commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque in malesuada orci, id scelerisque dolor. Duis non ante in ex ultrices euismod. Donec porttitor nibh at massa finibus rutrum. Ut et sem erat. Fusce molestie hendrerit dui.
+
+Mauris ut nibh in purus vestibulum feugiat sit amet malesuada nulla. Donec mi arcu, maximus at imperdiet eu, condimentum vel lacus. Phasellus et dictum sem. Vivamus id nunc vel tortor bibendum ultricies eget venenatis enim. Nullam quis nulla id lectus facilisis tristique. Proin aliquet eros in nunc rutrum pellentesque. Duis pellentesque velit quis neque vulputate, id tempor quam lacinia. Proin feugiat accumsan lorem et sagittis. Phasellus in mattis tellus. Etiam semper velit eget mattis vulputate. Aenean ut dui ut libero rutrum lobortis. Fusce et nisi non ligula vestibulum volutpat. Cras molestie est a tristique sollicitudin. Curabitur viverra metus et quam mattis, vitae pellentesque nibh consectetur. Vivamus facilisis mi egestas, rhoncus nunc ac, condimentum velit. </p>
 </template>
 
 <script>
-//IMPORT
-import projets from "../projets.js"
-  import {
-    onMounted,
-    ref
-  } from "vue"
-
-//COMPONENTS 
-import ProjetCard from "@/components/ProjetCard.vue";
+//COMPONENTS
+import NavBar from "@/components/NavBar.vue";
 export default {
-    name: "HomePage",
+    name: 'HomePage',
     components: {
-        ProjetCard
+        NavBar
     },
-    setup(){
-        class Projet{
-            constructor(name,image,type,description){
-                this.name = name;
-                this.image = image;
-                this.type = type;
-                this.description = description;
-            }
-        }
-        let data_projet = ref([]);
-        const makeDataProjet = () => {
-        for (const proj of projets) {
-          const newProj = new Projet(proj.name, proj.image, proj.type, proj.description);
-          data_projet.value.push(newProj);
-        }
-      }
-      onMounted(makeDataProjet);
-      return {
-        data_projet
-      }
-    }
 }
 </script>
 
-<style lang="scss">
-.projets{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: #F5F5F5;
-}
+<style>
+
+
 </style>
