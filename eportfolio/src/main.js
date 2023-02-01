@@ -4,6 +4,7 @@ import ProjetsPage from '@/page/ProjetsPage.vue'
 import AboutPage from '@/page/AboutPage.vue'
 import HomePage from '@/page/HomePage.vue'
 import ContactPage from '@/page/ContactPage.vue'
+import InfoProjet from '@/page/InfoProjet.vue'
 import { createRouter, createWebHashHistory}from 'vue-router';
 
 
@@ -13,6 +14,7 @@ const routes =[
     { path : '/about', component: AboutPage },
     { path : '/home', component: HomePage },
     { path : '/contact', component: ContactPage },
+    { path : '/projets/:projetName', name:'projet', component: InfoProjet },
 ];
 
 const router = createRouter({

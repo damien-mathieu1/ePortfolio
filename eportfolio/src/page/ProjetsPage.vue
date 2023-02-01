@@ -1,7 +1,7 @@
 <template>
     <NavBar/>
     <div class="projets">
-        <ProjetCard v-for="(projet,index) in data_projet" :info_projet="projet" :key="index"/>
+          <ProjetCard v-for="(projet,index) in data_projet" :info_projet="projet" :key="index"/>
     </div>
 </template>
 
@@ -49,12 +49,15 @@ export default {
 <style lang="scss">
 @import url('../style/normalize.css');
 .projets{
-  
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    .proj{
+      width: 65%;
+
+    }
     width: 100%;
     height: 100%;
+    border: solid 1px black;
 }
 </style>

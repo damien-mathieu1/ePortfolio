@@ -1,10 +1,9 @@
 <template>
-    <div class="projetCard">
+    <router-link class="projetCard" :to="{name: 'projet', params:{projetName: info_projet.name}}">
         <div :style="changeBackground"  class="projetImage">
-
         </div>
         <p class="name">{{info_projet.name}}</p>
-    </div>
+</router-link>
 </template>
 
 <script>
