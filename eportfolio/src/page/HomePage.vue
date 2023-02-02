@@ -1,30 +1,44 @@
 <template>
     <NavBar></NavBar>
-    <p>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pharetra porta urna. Donec ornare et lorem quis congue. Morbi ac ullamcorper neque. Cras eu imperdiet justo, eu ultrices est. Donec enim mi, sodales vel bibendum sed, consectetur id massa. Cras consequat consectetur suscipit. Integer lobortis convallis urna, eget condimentum nibh consectetur vel. Ut eu ultricies diam. Quisque vitae erat magna. Etiam euismod tincidunt magna, eu tempus neque interdum non. Quisque suscipit lacinia volutpat. Nunc quis maximus lorem. Proin eu luctus nibh. Integer in lobortis quam, eget dictum risus. Cras tincidunt cursus arcu, non scelerisque ex interdum sed.
-
-Proin cursus, elit non pellentesque laoreet, orci metus accumsan felis, id cursus dolor libero non purus. Phasellus cursus maximus lectus, et fermentum nibh lacinia non. Cras placerat placerat hendrerit. Vestibulum efficitur efficitur turpis quis sodales. Aliquam sed pellentesque ipsum. Etiam porta, nisi vel fermentum mollis, sem sem finibus nisl, sit amet gravida erat massa at justo. Donec in maximus elit.
-
-Aliquam nec justo velit. Nunc ullamcorper erat nibh. Cras ac tempor risus. Aliquam iaculis volutpat quam, sed tristique magna iaculis nec. Donec tincidunt tortor nunc. In volutpat, orci non blandit sodales, massa sapien vulputate nulla, et maximus ipsum risus nec odio. Curabitur facilisis cursus nisi eu ultrices. Cras ornare pellentesque metus, in aliquam orci vulputate in. Vestibulum eget gravida nulla. Aenean ultricies eros et maximus luctus. Maecenas laoreet turpis massa, in viverra urna interdum suscipit. Maecenas vehicula nec lacus vitae elementum. Nam nec pulvinar purus, quis dictum quam. Mauris porttitor magna a mi mollis consequat. Suspendisse tempor, erat ac sollicitudin tempus, nisl nisl tempus erat, ac sodales nibh lacus sit amet odio.
-
-In volutpat diam id nisi molestie feugiat. Curabitur nec mauris neque. Aenean in lectus nulla. Ut odio dui, tristique non fermentum eget, elementum nec nulla. Nulla congue rhoncus porta. Duis leo lorem, rutrum nec risus vitae, porta fermentum ligula. Praesent et nunc et tortor ullamcorper malesuada. Fusce at placerat justo. Sed tortor mi, finibus et euismod sed, hendrerit fringilla sapien. Morbi dictum nec massa varius commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque in malesuada orci, id scelerisque dolor. Duis non ante in ex ultrices euismod. Donec porttitor nibh at massa finibus rutrum. Ut et sem erat. Fusce molestie hendrerit dui.
-
-Mauris ut nibh in purus vestibulum feugiat sit amet malesuada nulla. Donec mi arcu, maximus at imperdiet eu, condimentum vel lacus. Phasellus et dictum sem. Vivamus id nunc vel tortor bibendum ultricies eget venenatis enim. Nullam quis nulla id lectus facilisis tristique. Proin aliquet eros in nunc rutrum pellentesque. Duis pellentesque velit quis neque vulputate, id tempor quam lacinia. Proin feugiat accumsan lorem et sagittis. Phasellus in mattis tellus. Etiam semper velit eget mattis vulputate. Aenean ut dui ut libero rutrum lobortis. Fusce et nisi non ligula vestibulum volutpat. Cras molestie est a tristique sollicitudin. Curabitur viverra metus et quam mattis, vitae pellentesque nibh consectetur. Vivamus facilisis mi egestas, rhoncus nunc ac, condimentum velit. </p>
+    <div class="encapsulation">
+        <div class="main">
+        <h1 class="titre">BIENVENUE DANS MON PORTFOLIO DIGITAL</h1>
+        <p class="info">Ce portfolio a été réalisé dans le but d'exposer mes projets réalisés par le passé.<br>Ce qui a motivé la création de ce portfolio est donc l'envie de mettre en avant mes projets mais également l'envie d'apprendre de nouvelle technologies tel que le Vue.JS, technologie que j'utilise pour faire ce site.<br>Pourquoi Vue.JS me diriez vous ?<br>Je débute dans l'informatique mais je pense que l'éco-conception des solutions digitales est un sujet très important donc je me suis documenté sur les technologies se prétant à l'éco-conception. Je suis donc tombé sur Vue.JS et également le concept de SPA (Single Page Application). Grâce à ces technologies les sites webs sont entièrement chargé rapidement après une seule requête auprès du serveur. L'avantage que cela nous offre est que le client ne fait pas de nouvelle requête au serveur pour avoir de nouvelle page lorsqu'il clique sur un lien de la barre de navigation. Individuellement, mon site n'a pas un grand impact sur la consommation des serveurs car il ne solicite que très peu. D'un point de vue écologique, si la plupart des sites utilisent des technologies allant dans ce sens alors l'impact qu'aurait le web sur l'environnement s'en trouverait réduit.</p>
+    </div>
+    </div>
+    
+<FooterCard></FooterCard>
 </template>
 
 <script>
 //COMPONENTS
 import NavBar from "@/components/NavBar.vue";
+import FooterCard from '@/components/FooterCard.vue';
+
 export default {
     name: 'HomePage',
     components: {
-        NavBar
+        NavBar,
+        FooterCard,
     },
 }
 </script>
 
-<style>
-
-
+<style lang="scss">
+.encapsulation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main{
+        display: flex;
+        width: 78%;
+        flex-direction: column;
+        align-items: center;
+        .titre{
+            margin :10%;
+            color:green;
+            font-size: 6vh;
+        }
+    }
+}
 </style>

@@ -7,14 +7,18 @@ Proin cursus, elit non pellentesque laoreet, orci metus accumsan felis, id cursu
 Aliquam nec justo velit. Nunc ullamcorper erat nibh. Cras ac tempor risus. Aliquam iaculis volutpat quam, sed tristique magna iaculis nec. Donec tincidunt tortor nunc. In volutpat, orci non blandit sodales, massa sapien vulputate nulla, et maximus ipsum risus nec odio. Curabitur facilisis cursus nisi eu ultrices. Cras ornare pellentesque metus, in aliquam orci vulputate in. Vestibulum eget gravida nulla. Aenean ultricies eros et maximus luctus. Maecenas laoreet turpis massa, in viverra urna interdum suscipit. Maecenas vehicula nec lacus vitae elementum. Nam nec pulvinar purus, quis dictum quam. Mauris porttitor magna a mi mollis consequat. Suspendisse tempor, erat ac sollicitudin tempus, nisl nisl tempus erat, ac sodales nibh lacus sit amet odio. 
 
   </p>
+  <FooterCard></FooterCard>
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue'
+import NavBar from '@/components/NavBar.vue';
+import FooterCard from '@/components/FooterCard.vue';
+
 export default {
     name: 'AboutPage',
     components :{
         NavBar,
+        FooterCard,
     }
 
 }

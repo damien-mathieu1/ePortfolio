@@ -3,6 +3,7 @@
     <div class="projets">
           <ProjetCard v-for="(projet,index) in data_projet" :info_projet="projet" :key="index"/>
     </div>
+    <FooterCard></FooterCard>
 </template>
 
 <script>
@@ -16,11 +17,14 @@ import projets from "../projets.js"
 //COMPONENTS 
 import ProjetCard from "@/components/ProjetCard.vue";
 import NavBar from "@/components/NavBar.vue";
+import FooterCard from '@/components/FooterCard.vue';
+
 export default {
     name: "HomePage",
     components: {
         ProjetCard,
-        NavBar
+        NavBar,
+        FooterCard,
     },
     setup(){
         class Projet{
@@ -53,6 +57,5 @@ export default {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border: solid 1px black;
 }
 </style>

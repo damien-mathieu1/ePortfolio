@@ -13,7 +13,7 @@
         <p class="titre">Techno(s) utilisée(s) : </p>
         <p>{{ projet.techno }}</p>
         <p class="titre">Lien pour le projet</p>
-        <a href="{{ projet.lien }}">Pour voir le code</a>
+        <a class="lien" :href=projet.lien>Lien du repository</a>
     </div>
 
     <FooterCard></FooterCard>
@@ -40,9 +40,12 @@ export default {
             return projetName;
           }
       });
+
+      const lien = projet.lien;
       
       return {
         projet,
+        lien
       }
       
     }
@@ -51,11 +54,13 @@ export default {
 
 <style lang='scss'>
 .top{
-    padding : 3%;
+    margin-top:3%;
+    margin-bottom: 3%;
     display: flex;
     align-items: center;
     width: 100%;
     .img{
+        margin-left : 3%;
         height: 30vh;
         background-size: cover;
         background-position: center;
@@ -63,7 +68,6 @@ export default {
     .titre{
         display: flex;
         flex-direction: column;
-        padding-left: 100px;
         .major{
             font-size: 2em;
             font-weight: bold;
@@ -76,6 +80,7 @@ export default {
 .desc{
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 5%;
     p{
         text-justify: auto;
         font-size: 1.2em;
@@ -83,6 +88,26 @@ export default {
     .titre{
         font-size: 1.3em;
         font-weight: bold;
+        
     }
+    .lien{
+        display: flex;  
+        align-items: center;
+        justify-content: space-around;
+        overflow: hidden;
+        width: 15%;
+        border : black solid 1px;
+        border-radius: 40px;
+        margin: 5px;
+    }
+    .lien:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: 0.3s;
+        background-color: green;
+        color : white;
+
+    }
+
 }
 </style>
