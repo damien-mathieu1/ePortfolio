@@ -1,19 +1,88 @@
 <template>
     <NavBar/>
-   Mauris ut nibh in purus vestibulum feugiat sit amet malesuada nulla. Donec mi arcu, maximus at imperdiet eu, condimentum vel lacus. Phasellus et dictum sem. Vivamus id nunc vel tortor bibendum ultricies eget venenatis enim. Nullam quis nulla id lectus facilisis tristique. Proin aliquet eros in nunc rutrum pellentesque. Duis pellentesque velit quis neque vulputate, id tempor quam lacinia. Proin feugiat accumsan lorem et sagittis. Phasellus in mattis tellus. Etiam semper velit eget mattis vulputate. Aenean ut dui ut libero rutrum lobortis. Fusce et nisi non ligula vestibulum volutpat. Cras molestie est a tristique sollicitudin. Curabitur viverra metus et quam mattis, vitae pellentesque nibh consectetur. Vivamus facilisis mi egestas, rhoncus nunc ac, condimentum velit. 
+    <div class="top">    
+        <img class="img" :src="projet.image" alt="">
+        <div class="titre">
+            <p class="major">{{ projet.name }}</p>
+            <p class="minor">{{ projet.type }}</p>
+        </div>  
+    </div>
+    <div class="desc">
+        <p class="titre">Description du projet : </p>
+        <p>{{ projet.description }}</p>
+        <p class="titre">Techno(s) utilisée(s) : </p>
+        <p>{{ projet.techno }}</p>
+        <p class="titre">Lien pour le projet</p>
+        <a href="{{ projet.lien }}">Pour voir le code</a>
+    </div>
+
+    <FooterCard></FooterCard>
 </template>
 
 <script>
+//IMPORTS
+import { useRoute } from 'vue-router'
+import projets from '../projets.js'
+
 //COMPONENTS
-import NavBar from '@/components/NavBar.vue'
+import NavBar from '@/components/NavBar.vue';
+import FooterCard from '@/components/FooterCard.vue';
 export default {
     name : 'InfoProjet',
     components:{
         NavBar,
+        FooterCard
+    },
+    setup(){
+      const route = useRoute();
+      const projet = projets.find((projetName)=>{
+        if(projetName.name == route.params.projetName){
+            return projetName;
+          }
+      });
+      
+      return {
+        projet,
+      }
+      
     }
 }
 </script>
 
-<style>
-
+<style lang='scss'>
+.top{
+    padding : 3%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .img{
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .titre{
+        display: flex;
+        flex-direction: column;
+        padding-left: 100px;
+        .major{
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .minor{
+            font-size: 1em;
+        }
+    }
+}
+.desc{
+    padding-left: 10%;
+    padding-right: 10%;
+    p{
+        text-justify: auto;
+        font-size: 1.2em;
+    }
+    .titre{
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+}
 </style>

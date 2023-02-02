@@ -51,13 +51,8 @@ export default {
 .projets{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    .proj{
-      width: 65%;
-
-    }
+    align-items: center;
     width: 100%;
-    height: 100%;
     border: solid 1px black;
 }
 </style>

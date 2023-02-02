@@ -3,7 +3,7 @@
         <div :style="changeBackground"  class="projetImage">
         </div>
         <p class="name">{{info_projet.name}}</p>
-</router-link>
+    </router-link>
 </template>
 
 <script>
