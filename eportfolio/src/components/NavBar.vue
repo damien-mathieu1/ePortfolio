@@ -20,8 +20,11 @@ export default {
 
 <style lang="scss">
 .border{
+    top:0;
     border-bottom : black solid 1px;
     width: 100%;
+    position : sticky;
+    background-color: white;
     .navBar{
         display: flex;
         justify-content: space-evenly;
