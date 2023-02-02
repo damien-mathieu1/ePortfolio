@@ -2,7 +2,8 @@
     <router-link class="projetCard" :to="{name: 'projet', params:{projetName: info_projet.name}}">
         <div :style="changeBackground"  class="projetImage">
         </div>
-        <p class="name">{{info_projet.name}}</p>
+        <div class="name"> <p >{{info_projet.name}}</p></div>
+       
     </router-link>
 </template>
 
@@ -36,17 +37,23 @@ export default {
     justify-content: space-around;
     align-items: center;
     width: 65%;
-    height: 30vh;
+    height: 18em;
     border : black solid 2.3px;
     border-radius: 40px;
-    margin: 20px;
-    p{      
+    margin-top: 5%;
+    .name{   
+        display: flex;
+        justify-content: center;
+        width: 50%;;  
+        font-size: 1.5em;
+        font-weight: bold;
         margin: 0px;
     }
     .projetImage{
-        width: 17%;
-        height: 70%;
-        background-size: cover;
+        border-radius: 40px;
+        width: 50%;
+        height: 100%;
+        background-size: contain;
         background-position : center;
     }
 }
@@ -54,6 +61,9 @@ export default {
     cursor: pointer;
     transform: scale(1.05);
     transition: 0.3s;
+    .name{
+        color:green;
+    }
 }   
 
 </style>

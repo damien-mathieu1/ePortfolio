@@ -12,7 +12,7 @@
         <p>{{ projet.description }}</p>
         <p class="titre">Techno(s) utilisée(s) : </p>
         <p>{{ projet.techno }}</p>
-        <p class="titre">Lien pour le projet</p>
+        <p class="titre">Lien pour le projet : </p>
         <a class="lien" :href=projet.lien>Lien du repository</a>
     </div>
 
@@ -97,17 +97,13 @@ export default {
         align-items: center;
         justify-content: space-around;
         overflow: hidden;
-        width: 15%;
+        width: 10%;
         border : black solid 1px;
-        border-radius: 40px;
         margin: 5px;
     }
     .lien:hover{
-        cursor: pointer;
-        transform: scale(1.05);
-        transition: 0.3s;
-        background-color: green;
-        color : white;
+        background-color: rgb(229, 255, 229);
+        color : black;
 
     }
 

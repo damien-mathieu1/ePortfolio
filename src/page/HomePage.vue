@@ -52,6 +52,7 @@ export default {
             margin-bottom: 3%;
             color:green;
             font-size: 6vh;
+            text-align: center;
         }
         .gif{
             border-radius: 5em;

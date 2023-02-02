@@ -1,6 +1,9 @@
 <template>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="border">
+    <router-link class="titre" to="/">ePortfolio
+            <i class="fa fa-eye"></i>
+    </router-link>
     <div class="navBar">
         <router-link class="fa fa-home" to="/home"></router-link>
         <router-link class="text" to='/projets'>Projets</router-link>
@@ -21,11 +24,23 @@ export default {
 
 <style lang="scss">
 .border{
+    background-color: rgb(229, 255, 229);
     top:0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position : sticky;
-    background-color: white;
-    border-bottom: solid black 1px;
+    .titre{
+        display: flex;
+        align-items: center;
+        font-size:1.8em;
+        font-weight: bold;
+        margin-left: 3%;
+    }
+    .titre:hover{
+        color:green;
+    }
     .navBar{
         display: flex;
         justify-content: space-evenly;

@@ -38,7 +38,7 @@ export default {
 
 .footer{
   bottom:0;
-  background-color: rgb(212, 214, 212);
+  background-color: rgb(229, 255, 229);
   margin:0;
   display: flex;
 }
