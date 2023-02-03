@@ -1,32 +1,22 @@
-ARG NODE_VERSION=latest
-ARG NGINX_VERSION=1.18.0
-FROM node:$NODE_VERSION as build
+FROM node:lts-alpine
 
-WORKDIR /build
+# install simple http server for serving static content
+RUN npm install -g http-server
 
-COPY ./package*.json ./
-COPY ./vue.config.js .
-COPY ./babel.config.js .
-COPY ./.eslintrc.js .
-#COPY ./.env .
-
-RUN [ "npm", "install", "-g", "@vue/cli" ]
-RUN [ "npm", "install" ]
-RUN [ "npm", "run", "lint" ]
-
-
-COPY ./src/ ./src/
-#COPY ./public/ ./public/
-
-RUN [ "npm", "run", "build" ]
-
-FROM bitnami/nginx:$NGINX_VERSION
-
+# make the 'app' folder the current working directory
 WORKDIR /app
-USER 1001
 
-COPY --from=build /build/dist .
+# copy both 'package.json' and 'package-lock.json' (if available)
+COPY package*.json ./
+
+# install project dependencies
+RUN npm install
+
+# copy project files and folders to the current working directory (i.e. 'app' folder)
+COPY . .
+
+# build app for production with minification
+RUN npm run build
 
 EXPOSE 8080
-
-
+CMD [ "http-server", "dist" ]
