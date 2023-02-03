@@ -6,10 +6,10 @@
         <div class="social">
           <a href="https://github.com/damien-mathieu1" class="fa fa-github faMobile"></a>
           <a href="https://www.linkedin.com/in/damien-mathieu-a70348241/" class="fa fa-linkedin-square faMobile"></a>
-          <a href="mailto:damien.mathieu.pro@gmail.com" class="fa fa-google faMobile"></a>
+          <a href="mailto:damien.mathieu.pro@gmail.com" class="fa fa-at faMobile"></a>
         </div>
         
-        <p class="text">Site réalisé par MATHIEU Damien © 2023<br>
+        <p class="text">MATHIEU Damien © 2023<br>
           Hebergé dans un conteneur docker qui tourne dans mon raspberry</p>
         </div>
       <div class="right">
@@ -37,6 +37,7 @@
   <style lang="scss">
   
   .footer{
+    z-index: 999;
     bottom:0;
     background-color: rgb(229, 255, 229);
     margin:0;

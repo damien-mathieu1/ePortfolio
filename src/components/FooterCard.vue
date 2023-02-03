@@ -6,7 +6,7 @@
       <div class="social">
         <a href="https://github.com/damien-mathieu1" class="fa fa-github faFooter"></a>
         <a href="https://www.linkedin.com/in/damien-mathieu-a70348241/" class="fa fa-linkedin-square faFooter"></a>
-        <a href="mailto:damien.mathieu.pro@gmail.com" class="fa fa-google faFooter"></a>
+        <a href="mailto:damien.mathieu.pro@gmail.com" class="fa fa-at faFooter"></a>
       </div>
       
       <p class="text">Site réalisé par MATHIEU Damien © 2023<br>
@@ -37,6 +37,7 @@ export default {
 <style lang="scss">
 
 .footer{
+  z-index: 999;
   bottom:0;
   background-color: rgb(229, 255, 229);
   margin:0;
@@ -82,8 +83,8 @@ export default {
     .link:hover{
       color:green;
       cursor: pointer;
-            transform: scale(1.05);
-            transition: 0.3s;
+      transform: scale(1.05);
+      transition: 0.3s;      
     }
   }
 }

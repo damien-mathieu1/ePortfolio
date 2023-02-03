@@ -35,6 +35,7 @@ export default {
 
 <style lang="scss">
 #borderMobile{
+    z-index: 999;
     background-color: rgb(229, 255, 229);
     top:0;
     width: 100%;

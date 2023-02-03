@@ -1,19 +1,31 @@
 <template>
     <NavBarMobile></NavBarMobile>
-    <div class="main">
-        <div class="titre">
-            <h1>Si vous souhaitez me contacter vous avez différentes options</h1>
+    <div class="mainMobile">
+        <div class="titreContactMobile">
+            <h1>Me Contacter :</h1>
         </div>
-        <div class="contact">
-            <div class="info">
-                <h2>Contact</h2>
-                    <p>Pour me contacter par mail veuillez cliquer sur le bouton suivant  <i class="fa fa-arrow-right"></i> <a href="mailto:damien.mathieu.pro@gmail.com" class="fa fa-google"></a></p>
-                    <p>Pour me contacter par téléphone veuillez cliquer sur le bouton suivant <i class="fa fa-arrow-right"></i> <a href="tel:0651343040" class="fa fa-phone"></a> (06 51 34 30 40)</p>
-                    <p>Pour me contacter sur linkedin veuillez cliquer sur le bouton suivant <i class="fa fa-arrow-right"></i> <a href="https://www.linkedin.com/in/damien-mathieu-a70348241/" class="fa fa-linkedin-square"></a></p> 
-                    <p>Pour voir mon compte github veuillez cliquer sur le bouton suivant <i class="fa fa-arrow-right" ></i> <a href="https://github.com/damien-mathieu1" class="fa fa-github"></a> </p>
+        <div class="socialMobile">
+            <a class="boxMobile" href="mailto:damien.mathieu.pro@gmail.com">
+                <a class="fa fa-at iconMobile" ></a>
+                <p class="descContactMobile">damien.mathieu.pro@gmail.com</p>
+            </a>
+            <a class="boxMobile" href="tel:0651343040">
+                <a  class="fa fa-phone iconMobile"></a>
+                <p class="descContactMobile">06 51 34 30 40</p>
+            </a>
+            <a class="boxMobile" href="https://www.linkedin.com/in/damien-mathieu-a70348241/">
+                <a  class="fa fa-linkedin-square iconMobile"></a>
+                <p class="descContactMobile">Linkedin</p>
+            </a>
+            <a class="boxMobile" href="https://github.com/damien-mathieu1">
+                <a  class="fa fa-github iconMobile"></a>
+                <p class="descContactMobile">Github</p>
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.584011329791!2d3.850896750926366!3d43.63601637901943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6aec48bfd6f25%3A0xe71ac4369b4c6da2!2sInformatique%20-%20IUT%20MONTPELLIER!5e0!3m2!1sfr!2sfr!4v1675379893940!5m2!1sfr!2sfr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            </a>
+        </div>
+        <div class="locauxMobile">
+            <p>Mes locaux : </p>
+            <iframe class="locMobile" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.584011329791!2d3.850896750926366!3d43.63601637901943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6aec48bfd6f25%3A0xe71ac4369b4c6da2!2sInformatique%20-%20IUT%20MONTPELLIER!5e0!3m2!1sfr!2sfr!4v1675379893940!5m2!1sfr!2sfr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 <FooterCardMobile></FooterCardMobile>
@@ -23,7 +35,7 @@
 <script>
 //COMPONENTS    
 import NavBarMobile from '@/components/componentsMobile/NavBarMobile.vue';
-import FooterCardMobile from "@/components/componentsMobile/FooterCardMobile.vue";
+import FooterCardMobile from '@/components/componentsMobile/FooterCardMobile.vue';
 export default {
     name: 'ContactPage',
     components :{
@@ -35,36 +47,67 @@ export default {
 </script>
 
 <style lang="scss">
-.main{
+.mainMobile{
     width: 100%;
-    .fa-google{
-        margin : 0;
-        padding:5px;
-        font-size: 1.5em;
-        border-radius: 1vh;
-        background-color: black;
-        color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .socialMobile{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 75%;
+        .boxMobile{
+            background-color: rgb(255, 255, 255);
+            width: 85%;
+            height: 10em;;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border : 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0 10px 10px 0 rgb(125, 136, 125);
+            margin-bottom: 100px;
+            .iconMobile{
+                font-size: 4em;
+            }  
+            .descContactMobile{
+                font-size: 0.9em;
+                margin-top: 5px;
+                font-weight: bold;
+            }            
+        }        
     }
-    .fa-arrow-right:hover {
-        color : black;
+    .titreContactMobile{
+        margin-top: 5%;
+        font-weight: bold;
+        font-size: 1.4em;
+        margin-bottom: 5%;
+
     }
-    .fa-phone{
-        font-size: 2em;
-    }
-    .fa-phone:hover{
-        color: black;
-    }
-    .fa-linkedin-square{
-        font-size: 2em;
-    }
-    .fa-linkedin-square:hover{
-        color: black;
-    }
-    .fa-github{
-        font-size: 2em;
-    }
-    .fa-github:hover{
-        color: black;
+    .locauxMobile{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        p{
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        margin-top: 5%;
+        margin-bottom: 10%;
+        .locMobile{
+            width: 150%;
+            height:15em;
+            border : 0;
+            border-radius: 30px;
+        }
+
     }
 }
+
+
 </style>
