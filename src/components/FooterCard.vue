@@ -4,9 +4,9 @@
     <div class="left">
       <p class="text">Me contacter :</p>
       <div class="social">
-        <a class="fa fa-github"></a>
-        <a class="fa fa-linkedin-square"></a>
-        <a href="" class="fa fa-google"></a>
+        <a href="https://github.com/damien-mathieu1" class="fa fa-github"></a>
+        <a href="https://www.linkedin.com/in/damien-mathieu-a70348241/" class="fa fa-linkedin-square"></a>
+        <a href="mailto:damien.mathieu.pro@gmail.com" class="fa fa-google"></a>
       </div>
       
       <p class="text">Site réalisé par MATHIEU Damien © 2023<br>
@@ -83,13 +83,12 @@ export default {
   width: 30px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 10px;
-  border-radius: 50%;
 }
 
 .fa:hover {
     opacity: 0.7;
     color:green;
+    cursor :pointer;
 
 }
 

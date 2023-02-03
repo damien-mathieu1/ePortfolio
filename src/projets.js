@@ -21,7 +21,7 @@ const projet = [
         type : "Projet Scolaire",
         description : "Pour réaliser ce projet nous étions en équipe de 3. Pour ce projet nous devions faire une application de vente en ligne en utilisant du PHP. Le choix du produit à mettre en vente était libre donc nous avons choisi de vendre des chaussures. Le but de ce projet était de nous faire maitriser les bases et d'avoir de bons fondamentaux sur le langage PHP qui est un langage très largement répandue. De plus nous avons été sensibilisé aux attaques que peuvent subir les sites internet et comment s'en prémunir. Nous avons donc effectué des requêtes préparées pour empêcher les injections SQL dans notre base de données, de plus nous avons empêcher les injections HTML en utilisant la fonction htmlspecialchar(). Ce projet n'a pas pu être totalement terminé par manque de temps mais dans l'état actuel il est satisfaisant.",
         techno : "PHP, SQL(mySql), JavaScript",
-        lien : "https://github.com/damien-mathieu1/Analyse-d-adresse-IP"
+        lien : "https://github.com/damien-mathieu1/FakeX"
     },
     {
         name: "ePortfolio, Portfolio digital",

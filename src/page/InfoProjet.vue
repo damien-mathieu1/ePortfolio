@@ -97,7 +97,7 @@ export default {
         align-items: center;
         justify-content: space-around;
         overflow: hidden;
-        width: 10%;
+        width: 15%;
         border : black solid 1px;
         margin: 5px;
     }
