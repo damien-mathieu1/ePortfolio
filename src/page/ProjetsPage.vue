@@ -1,52 +1,37 @@
 <template>
-    <NavBar/>
-    <div class="projets">
-          <ProjetCard v-for="(projet,index) in data_projet" :info_projet="projet" :key="index"/>
-    </div>
-    <FooterCard></FooterCard>
+    <ProjetPageCard v-if="!mobileView"></ProjetPageCard>
+    <ProjetsPageCardMobile v-if="mobileView"></ProjetsPageCardMobile>
 </template>
 
 <script>
-//IMPORT
-import projets from "../projets.js"
-  import {
-    onMounted,
-    ref
-  } from "vue"
-
 //COMPONENTS 
-import ProjetCard from "@/components/ProjetCard.vue";
-import NavBar from "@/components/NavBar.vue";
-import FooterCard from '@/components/FooterCard.vue';
+import ProjetPageCard from "@/components/ProjetsPageCard.vue"
+import ProjetsPageCardMobile from "@/components/componentsMobile/ProjetsPageCardMobile.vue"
 
 export default {
     name: "HomePage",
     components: {
-        ProjetCard,
-        NavBar,
-        FooterCard,
+        ProjetPageCard,
+        ProjetsPageCardMobile
     },
-    setup(){
-        class Projet{
-            constructor(name,image,type,description){
-                this.name = name;
-                this.image = image;
-                this.type = type;
-                this.description = description;
-            }
+    data:()=>{
+        return {
+            mobileView : false,
         }
-        let data_projet = ref([]);
-        const makeDataProjet = () => {
-        for (const proj of projets) {
-          const newProj = new Projet(proj.name, proj.image, proj.type, proj.description);
-          data_projet.value.push(newProj);
+    },
+    
+    methods:{
+        handleView(){
+            this.mobileView = window.innerWidth <= 815;
         }
-      }
-      onMounted(makeDataProjet);
-      return {
-        data_projet
-      }
-    }
+    },
+    mounted() {
+        window.addEventListener("resize", this.handleView);
+        this.mobileView = window.innerWidth <= 990;
+    },
+    unmounted() {
+        window.removeEventListener("resize", this.handleView);
+    },
 }
 </script>
 

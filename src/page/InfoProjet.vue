@@ -1,54 +1,37 @@
 <template>
-    <NavBar/>
-    <div class="top">    
-        <img class="img" :src="projet.image" alt="">
-        <div class="titre">
-            <p class="major">{{ projet.name }}</p>
-            <p class="minor">{{ projet.type }}</p>
-        </div>  
-    </div>
-    <div class="desc">
-        <p class="titre">Description du projet : </p>
-        <p>{{ projet.description }}</p>
-        <p class="titre">Techno(s) utilisée(s) : </p>
-        <p>{{ projet.techno }}</p>
-        <p class="titre">Lien pour le projet : </p>
-        <a class="lien" :href=projet.lien>Lien du repository</a>
-    </div>
-
-    <FooterCard></FooterCard>
+    <InfoProjetCard v-if="!mobileView"></InfoProjetCard>
+    <InfoProjetCardMobile v-if="mobileView"></InfoProjetCardMobile>
 </template>
 
 <script>
-//IMPORTS
-import { useRoute } from 'vue-router'
-import projets from '../projets.js'
+//COMPONENTS 
+import InfoProjetCard from "@/components/InfoProjetCard.vue"
+import InfoProjetCardMobile from "@/components/componentsMobile/InfoProjetCardMobile.vue";
 
-//COMPONENTS
-import NavBar from '@/components/NavBar.vue';
-import FooterCard from '@/components/FooterCard.vue';
 export default {
-    name : 'InfoProjet',
-    components:{
-        NavBar,
-        FooterCard
+    name: "HomePage",
+    components: {
+        InfoProjetCard,
+        InfoProjetCardMobile
     },
-    setup(){
-      const route = useRoute();
-      const projet = projets.find((projetName)=>{
-        if(projetName.name == route.params.projetName){
-            return projetName;
-          }
-      });
-
-      const lien = projet.lien;
-      
-      return {
-        projet,
-        lien
-      }
-      
-    }
+    data:()=>{
+        return {
+            mobileView : false,
+        }
+    },
+    
+    methods:{
+        handleView(){
+            this.mobileView = window.innerWidth <= 815;
+        }
+    },
+    mounted() {
+        window.addEventListener("resize", this.handleView);
+        this.mobileView = window.innerWidth <= 990;
+    },
+    unmounted() {
+        window.removeEventListener("resize", this.handleView);
+    },
 }
 </script>
 

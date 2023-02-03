@@ -30,7 +30,6 @@ const projet = [
         description: "L'objectif derrière ce projet est de me former aux nouvelles technologies en vogue telle que le Vue.JS et également mon objectif est un objectif écologique comme expliqué dans la page d'accueil du portfolio. A travers ce projet je veux apprendre à me servir de Vue.JS mais plus globalement me former aux framework JavaScript tel que ReactJS ou encore AngularJS, seulement j'ai choisi de commencer mon apprentissage par le Vue. En plus d'apprendre le Vue, j'ai envie d'apprendre à créer des conteneurs docker et me servir de la technologie docker. Je suis intéressé par le devops et le docker est une part intégrante du devops donc j'ai envie d'héberger ce site sur mon Raspberry Pi Zero 2 W et de run le serveur dans un conteneur docker. La seconde étape de ce projet est donc l'hébergement du site.",
         techno: "Vue.JS, JavaScript, HTML, CSS(scss), Docker, Raspberry",
         lien :"https://github.com/damien-mathieu1/ePortfolio",
-    }
-    
+    },   
 ]
 module.exports  = projet;

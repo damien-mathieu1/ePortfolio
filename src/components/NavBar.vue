@@ -5,7 +5,7 @@
             <i class="fa fa-eye"></i>
     </router-link>
     <div class="navBar">
-        <router-link class="fa fa-home" to="/home"></router-link>
+        <router-link class="fa fa-home faNav" to="/home"></router-link>
         <router-link class="text" to='/projets'>Projets</router-link>
         <router-link class="text" to='/about'>A propos de moi</router-link>
         <router-link class="text" to='/contact'>Contact</router-link>
@@ -60,14 +60,14 @@ export default {
             font-weight: 480;
             color:green;
         }
-        .fa {
+        .faNav {
             font-size: 2.2em;
             text-align: center;
             text-decoration: none;
             margin: 5px 2px;
             border-radius: 50%;
         }
-        .fa:hover{
+        .faNav:hover{
             cursor: pointer;
             transform: scale(1.05);
             transition: 0.3s;
