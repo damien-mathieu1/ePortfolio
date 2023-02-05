@@ -9,6 +9,7 @@ import ContactPageCard from '@/components/ContactPageCard.vue';
 import ContactPageCardMobile from '@/components/componentsMobile/ContactPageCardMobile.vue';
 
 export default {
+    title: 'Contact, ePortfolio',
     name: "ContactPage",
     components: {
         ContactPageCard,

@@ -9,7 +9,8 @@ import InfoProjetCard from "@/components/InfoProjetCard.vue"
 import InfoProjetCardMobile from "@/components/componentsMobile/InfoProjetCardMobile.vue";
 
 export default {
-    name: "HomePage",
+    title: 'Information Projet',
+    name: "InfoProjet",
     components: {
         InfoProjetCard,
         InfoProjetCardMobile

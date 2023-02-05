@@ -6,6 +6,8 @@ import HomePage from '@/page/HomePage.vue'
 import ContactPage from '@/page/ContactPage.vue'
 import InfoProjet from '@/page/InfoProjet.vue'
 import { createRouter, createWebHashHistory}from 'vue-router';
+import titleMixin from './mixins/titleMixin';
+
 
 
 
@@ -24,5 +26,6 @@ const router = createRouter({
 });
 
 const VueApp = createApp(App);
+VueApp.mixin(titleMixin);
 VueApp.use(router);
 VueApp.mount('#app');

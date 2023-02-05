@@ -9,7 +9,8 @@ import ProjetPageCard from "@/components/ProjetsPageCard.vue"
 import ProjetsPageCardMobile from "@/components/componentsMobile/ProjetsPageCardMobile.vue"
 
 export default {
-    name: "HomePage",
+    title : "Tous les projets",
+    name: "ProjetsPage",
     components: {
         ProjetPageCard,
         ProjetsPageCardMobile

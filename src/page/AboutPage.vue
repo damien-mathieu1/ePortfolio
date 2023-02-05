@@ -8,11 +8,12 @@ import AboutPageCard from "@/components/AboutPageCard.vue";
 import AboutPageCardMobile from "@/components/componentsMobile/AboutPageCardMobile.vue";
 
 export default {
-    name: 'AboutPage',
+  title: 'A propos, ePortfolio',
+      name: 'AboutPage',
     components :{
         AboutPageCard,
         AboutPageCardMobile
-    },
+    },  
     data:()=>{
         return {
             mobileView : false,

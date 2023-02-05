@@ -9,6 +9,7 @@ import HomePageCard from "@/components/HomePageCard.vue";
 import HomePageCardMobile from "@/components/componentsMobile/HomePageCardMobile.vue";
 
 export default {
+    title:'Accueil, ePortfolio',
     name: 'HomePage',
     components: {
         HomePageCard,
