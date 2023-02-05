@@ -4,15 +4,17 @@
     <div id="borderMobile">
         <a @click="showNav=!showNav, scroll() " class="fa fa-bars" ></a>
          
-        <router-link class="titreMobile" to="/">ePortfolio
+        <router-link @click="scroll()" class="titreMobile" to="/">ePortfolio
                 <i  class="fa fa-eye"></i>
         </router-link>
     </div>
-    <div :class="{'open':showNav, 'close':!showNav}" id="navBarMobile" >
-            <router-link class="text fa fa-home" to="/home"></router-link>
-            <router-link class="text" to='/projets'>Projets</router-link>
-            <router-link class="text" to='/about'>A propos de moi</router-link>
-            <router-link class="text" to='/contact'>Contact</router-link>
+    <div :class="{'open':showNav, 'close':!showNav}" id="navBarMobile" @wheel.prevent
+ @touchmove.prevent
+ @scroll.prevent>
+            <router-link @click="showNav=!showNav" class="text fa fa-home" to="/home" ></router-link>
+            <router-link @click="showNav=!showNav" class="text" to='/projets'>Projets</router-link>
+            <router-link @click="showNav=!showNav" class="text" to='/about'>A propos de moi</router-link>
+            <router-link @click="showNav=!showNav" class="text" to='/contact'>Contact</router-link>
     </div> 
     
 </template>
@@ -44,6 +46,8 @@ export default {
     align-items: center;
     position : sticky;
     height:4em;
+    border: 0px solid rgb(229, 255, 229);
+    box-shadow: -1px 6px 6px -1px rgba(0,0,0,0.5);
     .fa-bars{
         font-size: 2.2em;
         text-align: center;
@@ -64,16 +68,17 @@ export default {
 }
 #navBarMobile{
         position: absolute;
-        left : -500px;
+        top : -500px;
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         background-color: rgb(229, 255, 229);
-        transition : 0.5s transform cubic-bezier(0,.12,.14,1);
+        transition : 1s transform cubic-bezier(0,.12,.14,1);
         .text{
-                margin-top : 15%;
+                margin-top: 10%;
                 color : black;
                 font-size: 2.3em;
                 font-weight: 400;
@@ -81,10 +86,9 @@ export default {
         
     }
 .close{
-    transform: translateX(-500px);}
+    transform: translateY(-500px);}
 .open{
-    visibility: visible !important;
-    transform: translateX(500px);    
+    transform: translateY(500px);    
 }
 
 </style>

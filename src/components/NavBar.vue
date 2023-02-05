@@ -32,6 +32,8 @@ export default {
     justify-content: space-between;
     align-items: center;
     position : sticky;
+    border : solid 0px rgb(229, 255, 229);
+    box-shadow: -1px 6px 6px -1px rgba(0,0,0,0.5);
     .titre{
         display: flex;
         align-items: center;

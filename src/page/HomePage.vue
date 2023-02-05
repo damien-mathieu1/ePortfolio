@@ -37,45 +37,4 @@ export default {
 </script>
 
 <style lang="scss">
-.encapsulation{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .main{
-        display: flex;
-        width: 78%;
-        flex-direction: column;
-        align-items: center;
-        .titre{
-            margin-top :10%;
-            margin-bottom: 3%;
-            color:green;
-            font-size: 6vh;
-            text-align: center;
-        }
-        .gif{
-            border-radius: 5em;
-            margin-bottom: 5%;
-        }
-        .info{
-            width: 65%;
-            margin-bottom: 10%;
-            h2{
-                font-size: 1.8em;
-            }
-            p{
-                font-size: 1.2em;
-                text-align : justify;
-
-            }
-            a{
-                color:green;
-                font-weight: 550;
-            }
-            a:hover{
-                color:darkgreen;
-            }
-        }
-    }
-}
 </style>

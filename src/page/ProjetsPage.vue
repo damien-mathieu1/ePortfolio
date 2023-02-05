@@ -37,12 +37,4 @@ export default {
 
 <style lang="scss">
 @import url('../style/normalize.css');
-.projets{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10%;
-    margin-top: 5%;
-}
 </style>

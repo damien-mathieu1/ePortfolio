@@ -13,6 +13,9 @@
           <img src="@/assets/defiNDL.png" alt="gagnant" class="imgArhs">
       </div>
     </div>
+    <div :class="{'visible':scroll,'unvisible':!scroll}" @click="scrollUp">
+      <i class="fa fa-arrow-up up"></i>
+    </div>
   <FooterCard></FooterCard>
 </template>
 
@@ -25,12 +28,37 @@ export default {
     components :{
         NavBar,
         FooterCard,
-    }
+    },
+    data:()=>{
+        return {
+            scroll : false,
+        }
+    },
+
+    methods:{
+        handleScroll(){
+            if(window.scrollY > 150){
+                this.scroll = true;
+            }else{
+                this.scroll = false;
+            }
+        },
+        scrollUp(){
+            window.scrollTo(0,0);
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    unmounted() {
+        window.removeEventListener("scroll", this.handleScroll);
+    },
 
 }
 </script>
 
 <style lang="scss">
+@import url('../style/upArrow.scss');
 
 .main{
   width: 100%;

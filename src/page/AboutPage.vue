@@ -36,39 +36,4 @@ export default {
 </script>
 
 <style lang="scss">
-
-.main{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .titre{
-    margin-top:5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    margin-bottom: 5% ;
-    .gif{
-      height: 20%;
-      width: 20%;
-      border-radius: 50px;
-    }
-    .start{
-      width: 60%;
-      text-align: center;
-    }
-    .pres{
-      width: 60%;
-      font-size: 1.2em;
-      text-align: justify;
-    }
-    .img{
-      width: 25%;
-      border-radius: 10px;
-    }
-  }
-}
-
-
 </style>

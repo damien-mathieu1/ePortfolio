@@ -1,6 +1,10 @@
 <template>
     <NavBar/>
-    <div class="top">    
+
+    <div @click="$router.back()" class="back">
+        <i class="fa fa-arrow-left arrowBack"></i>  
+    </div>
+    <div class="top">  
         <img class="img" :src="projet.image" alt="">
         <div class="titre">
             <p class="major">{{ projet.name }}</p>
@@ -15,7 +19,9 @@
         <p class="titre">Lien pour le projet : </p>
         <a class="lien" :href=projet.lien>Lien du repository</a>
     </div>
-
+    <div :class="{'visible':scroll,'unvisible':!scroll}" @click="scrollUp">
+      <i class="fa fa-arrow-up up"></i>
+    </div>
     <FooterCard></FooterCard>
 </template>
 
@@ -33,6 +39,11 @@ export default {
         NavBar,
         FooterCard
     },
+    data:()=>{
+        return {
+            scroll : false,
+        }
+    },
     setup(){
       const route = useRoute();
       const projet = projets.find((projetName)=>{
@@ -48,11 +59,56 @@ export default {
         lien
       }
       
-    }
+    },
+    methods:{
+        handleScroll(){
+            if(window.scrollY > 150){
+                this.scroll = true;
+            }else{
+                this.scroll = false;
+            }
+        },
+        scrollUp(){
+            window.scrollTo(0,0);
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    unmounted() {
+        window.removeEventListener("scroll", this.handleScroll);
+    },
 }
 </script>
 
 <style lang='scss'>
+@import url('../style/upArrow.scss');
+
+.back{
+    margin-left: 3%;
+    margin-top: 3%;
+    font-size: 2em;
+    color: black;
+    
+    .arrowBack{
+        width: 1em;
+        height: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:10px;
+        border : black solid 2px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+            border : green solid 2px;
+            color : green;
+            transform: scale(1.1);
+        }
+    }
+    
+}
 .top{
     margin-top:3%;
     margin-bottom: 3%;
@@ -76,6 +132,7 @@ export default {
         }
         .minor{
             font-size: 1.3em;
+            font-weight: bold;
         }
     }
 }

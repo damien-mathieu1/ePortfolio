@@ -42,6 +42,8 @@
     background-color: rgb(229, 255, 229);
     margin:0;
     display: flex;
+    border: solid 0px rgb(229, 255, 229);
+    box-shadow : -1px -5px 6px -1px rgba(0,0,0,0.5);  
   }
   .left{
     display: flex;

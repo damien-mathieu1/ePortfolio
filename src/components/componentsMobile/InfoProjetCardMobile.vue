@@ -1,5 +1,8 @@
 <template>
     <NavBarMobile/>
+    <div @click="$router.back()" class="back">
+        <i class="fa fa-arrow-left arrowBack"></i>  
+    </div>
     <div class="topMobile">    
         <img class="imgMobile" :src="projet.image" alt="">
     </div>
@@ -18,7 +21,9 @@
         <p class="titreMobile">Lien pour le projet : </p>
         <a class="lienMobile" :href=projet.lien>Lien du repository</a>
     </div>
-
+    <div :class="{'visible':scroll,'unvisible':!scroll}" @click="scrollUp">
+      <i class="fa fa-arrow-up up"></i>
+    </div>
     <FooterCardMobile></FooterCardMobile>
 </template>
 
@@ -51,11 +56,54 @@ export default {
         lien
       }
       
-    }
+    },
+    data:()=>{
+        return {
+            scroll : false,
+        }
+    },
+
+    methods:{
+        handleScroll(){
+            if(window.scrollY > 50){
+                this.scroll = true;
+            }else{
+                this.scroll = false;
+            }
+        },
+        scrollUp(){
+            window.scrollTo(0,0);
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    unmounted() {
+        window.removeEventListener("scroll", this.handleScroll);
+    },
 }
 </script>
 
 <style lang='scss'>
+@import url('@/style/upArrow.scss');
+.back{
+    margin-left: 3%;
+    margin-top: 5%;
+    font-size: 2em;
+    color: black;
+    .arrowBack{
+        width: 0.8em;
+        height: 0.8em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:10px;
+        border : black solid 2px;
+        border-radius: 50%;
+    }
+    
+}
+
 .topMobile{
     margin-top:3%;
     margin-bottom: 3%;
