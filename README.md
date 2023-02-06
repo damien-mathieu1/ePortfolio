@@ -6,10 +6,8 @@ Ce portfolio a été réalisé dans le but d'exposer mes réalisations. Ce qui a
 
 ### Comment y accéder ?
 ```
-https://www.damien-mathieu.live
+[ePortfolio](https://www.damien-mathieu.live)
 ```
 En cliquant sur ce lien vous arriverez sur la version actuelle du site, elle est amenée à changer à travers les améliorations que j'y apporterai grâce aux connaissances que j'accumule de jour en jour.
 
 ### C'est à peu près tout !
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
