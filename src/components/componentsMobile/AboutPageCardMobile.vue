@@ -8,10 +8,10 @@
           <h1 class="startMobile">Assez parlé d'école.</h1>
           <img class="imgMobile" src="@/assets/IMG_9299.jpg" alt="moi">
           <p class="presMobile">Là au dessus, et bien c'est moi (pas le serpent, je suis celui qui le tient) ! Je trouvais cela plus parlant d'avoir une image de la personne qui se présente ! Comme je ne savais pas quelle image mettre j'ai opté pour celle la avec mon ami le python.</p>
-          <p class="presMobile">Dans la vie, j'aime bien sortir et faire la fête (comme la plupart des jeunes de mon âge), je suis également féru de cowboy bebop, c'est un anime qui fait passer de très belle morale à chaque épisode ! Je vous conseille vivement de visionner cette oeuvre, j'affectionne également beaucoup les films d'animations du studio Ghibli. Il y a quelques temps j'étais également un grand amateur de tennis, bien que j'ai un peu ralenti la cadence j'aime toujours autant me dépenser en faisant du tennis.</p>
-          <h1 class="startMobile">Mon dernier accomplissement en date</h1>
+          <p class="presMobile">Je suis féru de cowboy bebop, c'est un anime qui fait passer de très belle morale à chaque épisode ! Je vous conseille vivement de visionner cette oeuvre, j'affectionne également beaucoup les films d'animations du studio Ghibli. Il y a quelques temps j'étais également un grand amateur de tennis, bien que j'ai un peu ralenti la cadence j'aime toujours autant me dépenser en faisant du tennis.</p>
+          <!--<h1 class="startMobile">Mon dernier accomplissement en date</h1>
           <p class="presMobile">J'ai participé à l'<a href="https://www.nuitdelinfo.com/">édition 2022 de la nuit de l'info</a> avec mon équipe "<a href="https://www.nuitdelinfo.com/inscription/equipes/105">Le Royaume</a>" composée de 6 membres. Durant cette nuit de l'info nous avons ciblé les défis écologiques. Parmis les 3 défis écologiques que nous avions relevé nous avons réussi à en gagner un ! Nous avons donc gagné le défi "<a href="https://www.nuitdelinfo.com/inscription/defis/333">Mets du Green dans ton IT</a>" proposé par le groupe "ARHS Group". Pour ce défi nous devions faire une réalisation la plus écologique possible et pour cela nous avons fait un site en VueJS hébergé dans un conteneur docker dans un raspberry (Cela correspond à ce que j'essaie de faire seul pour mon PortFolio). Cette nuit de l'info m'a permit de mettre un pied dans les technologies en vogue telle que VueJS et docker.</p>
-          <img src="@/assets/defiNDL.png" alt="gagnant" class="imgArhsMobile">
+          <img src="@/assets/defiNDL.png" alt="gagnant" class="imgArhsMobile">-->
 
       </div>
     </div>

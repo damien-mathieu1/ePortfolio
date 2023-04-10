@@ -23,6 +23,8 @@
 
             </a>
         </div>
+        <a class="cvMobile" href="https://webinfo.iutmontp.univ-montp2.fr/~mathieud/CV-MATHIEU-Damien.pdf" target="_blank" rel="noopener noreferrer">Télécharger mon cv</a>
+
         <div class="locauxMobile">
             <p>Mes locaux : </p>
             <iframe class="locMobile" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.584011329791!2d3.850896750926366!3d43.63601637901943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6aec48bfd6f25%3A0xe71ac4369b4c6da2!2sInformatique%20-%20IUT%20MONTPELLIER!5e0!3m2!1sfr!2sfr!4v1675379893940!5m2!1sfr!2sfr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -134,8 +136,23 @@ export default {
             border : 0;
             border-radius: 30px;
         }
-
     }
+    .cvMobile{
+            width: 30%;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+    }
+    
+    
+
 }
 
 
