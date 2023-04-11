@@ -19,7 +19,7 @@
         <p class="titreMobile">Techno(s) utilisée(s) : </p>
         <p>{{ projet.techno }}</p>
         <p class="titreMobile">Lien pour le projet : </p>
-        <a class="lienMobile" :href=projet.lien>Lien du repository</a>
+        <a class="lienMobile" :href=projet.lien target="_blank" rel="noopener noreferrer">Lien du repository</a>
     </div>
     <div :class="{'visible':scroll,'unvisible':!scroll}" @click="scrollUp">
       <i class="fa fa-arrow-up up"></i>

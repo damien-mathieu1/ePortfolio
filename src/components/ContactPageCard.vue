@@ -13,11 +13,11 @@
                 <a  class="fa fa-phone icon"></a>
                 <p class="descContact">06 51 34 30 40</p>
             </a>
-            <a class="box" href="https://www.linkedin.com/in/damien-mathieu-a70348241/">
+            <a class="box" href="https://www.linkedin.com/in/damien-mathieu-a70348241/" target="_blank" rel="noopener noreferrer">
                 <a  class="fa fa-linkedin-square icon"></a>
                 <p class="descContact">Linkedin</p>
             </a>
-            <a class="box" href="https://github.com/damien-mathieu1">
+            <a class="box" href="https://github.com/damien-mathieu1" target="_blank" rel="noopener noreferrer">
                 <a  class="fa fa-github icon"></a>
                 <p class="descContact">Github</p>
 

@@ -4,8 +4,8 @@
       <div class="left">
         <p class="text">Me contacter :</p>
         <div class="social">
-          <a href="https://github.com/damien-mathieu1" class="fa fa-github faMobile"></a>
-          <a href="https://www.linkedin.com/in/damien-mathieu-a70348241/" class="fa fa-linkedin-square faMobile"></a>
+          <a href="https://github.com/damien-mathieu1" class="fa fa-github faMobile" target="_blank" rel="noopener noreferrer"></a>
+          <a href="https://www.linkedin.com/in/damien-mathieu-a70348241/" class="fa fa-linkedin-square faMobile" target="_blank" rel="noopener noreferrer"></a>
           <a href="mailto:damien.mathieu.pro@gmail.com" class="fa fa-at faMobile"></a>
         </div>
         
