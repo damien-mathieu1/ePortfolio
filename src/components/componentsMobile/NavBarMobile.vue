@@ -14,6 +14,7 @@
             <router-link @click="showNav=!showNav" class="text fa fa-home" to="/home" ></router-link>
             <router-link @click="showNav=!showNav" class="text" to='/projets'>Projets</router-link>
             <router-link @click="showNav=!showNav" class="text" to='/about'>A propos de moi</router-link>
+            <router-link @click="showNav=!showNav" class="text" to='/faq'>FAQ</router-link>
             <router-link @click="showNav=!showNav" class="text" to='/contact'>Contact</router-link>
     </div> 
     

@@ -8,6 +8,7 @@
         <router-link class="fa fa-home faNav" to="/home"></router-link>
         <router-link class="text" to='/projets'>Projets</router-link>
         <router-link class="text" to='/about'>A propos de moi</router-link>
+        <router-link class="text" to='/faq'>FAQ</router-link>
         <router-link class="text" to='/contact'>Contact</router-link>
         <router-view>         
         </router-view>

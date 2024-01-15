@@ -4,6 +4,7 @@ import ProjetsPage from '@/page/ProjetsPage.vue'
 import AboutPage from '@/page/AboutPage.vue'
 import HomePage from '@/page/HomePage.vue'
 import ContactPage from '@/page/ContactPage.vue'
+import FAQ from '@/page/FAQPage.vue'
 import InfoProjet from '@/page/InfoProjet.vue'
 import { createRouter, createWebHashHistory}from 'vue-router';
 import titleMixin from './mixins/titleMixin';
@@ -18,6 +19,7 @@ const routes =[
     { path : '/home', component: HomePage },
     { path : '/contact', component: ContactPage },
     { path : '/projets/:projetName', name:'projet', component: InfoProjet },
+    { path : '/faq', component: FAQ },
 ];
 
 const router = createRouter({

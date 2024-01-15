@@ -23,7 +23,7 @@
 
             </a>
         </div>
-        <a class="cvMobile" href="https://webinfo.iutmontp.univ-montp2.fr/~mathieud/CV-MATHIEU-Damien.pdf" target="_blank" rel="noopener noreferrer">Télécharger mon cv</a>
+        <a class="cvMobile" href="https://drive.google.com/file/d/1cwKoS0pEB1j1Kymd2_ZXIMHRWa8oZiKu/view?usp=sharing" target="_blank" rel="noopener noreferrer">Télécharger mon cv</a>
 
         <div class="locauxMobile">
             <p>Mes locaux : </p>
